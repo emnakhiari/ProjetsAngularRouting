@@ -1,0 +1,21 @@
+<p>invoice-component works!</p>
+<div *ngFor="let a of list" >
+    <div *ngIf="a.idFacture==id &&  a.active==true" class="card">
+        <ul>
+        <li><h2>Facture : {{a.idFacture}}</h2> <br> 
+        <p>montantFacture : {{a.montantFacture}}</p>
+        <p>montantRemise : {{a.montantRemise}}</p>
+        <p>dateFacture: {{a.dateFacture}}</p>
+    
+        </li>
+    </ul>
+    </div>
+    <div *ngIf=" a.idFacture==id && a.active==false" class="card">
+       <p>Impossible de visualiser les détails
+        de la facture</p>
+    </div>
+
+</div>
+<div>
+    <button (click)="retour()"> Retour</button>
+</div>
